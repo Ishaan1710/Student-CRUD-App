@@ -1,0 +1,22 @@
+<h2>Add Student</h2>
+<form [formGroup]="addForm" (ngSubmit)="addForm.valid && onSubmit()" >
+  <div>
+    <label for="name">Name:</label>
+    <input type="text" id="name" formControlName="name" required>
+  </div>
+  <div>
+    <label for="department">Department:</label>
+    <select id="department" formControlName="department" required>
+      <option value="" disabled selected>Select Department</option>
+      <option value="Computer Science">Computer Science</option>
+      <option value="Electrical Engineering">Electrical Engineering</option>
+      <option value="Mechanical Engineering">Mechanical Engineering</option>
+      <!-- Add more departments as needed -->
+    </select>
+  </div>
+  <div>
+    <label for="phonenumber">Phone Number:</label>
+    <input type="tel" id="phonenumber" formControlName="phonenumber" required>
+  </div>
+  <button type="submit">Add Student</button>
+</form>

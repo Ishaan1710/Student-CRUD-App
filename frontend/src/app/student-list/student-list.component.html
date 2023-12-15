@@ -1,0 +1,17 @@
+<h2>Student List</h2>
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Department</th>
+    <th>Phone Number</th>
+  </tr>
+  <tr *ngFor="let student of students">
+    <td>{{ student.id }}</td>
+    <td>{{ student.name }}</td>
+    <td>{{ student.department }}</td>
+    <td>{{ student.phonenumber }}</td>
+    <td><a [routerLink]="['/details', student.id]">Details</a></td>
+    <td><button type="button" class="btn btn-danger" (click)="onDelete(student)">Delete</button></td>
+  </tr>
+</table>
